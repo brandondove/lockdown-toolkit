@@ -194,6 +194,11 @@ class Lockdown_Toolkit_Hidden_Login {
 			return;
 		}
 
+		// Skip if user is already logged in
+		if ( is_user_logged_in() ) {
+			return;
+		}
+
 		$login_page_url = get_option( self::LOGIN_PAGE_URL_OPTION );
 
 		// Only proceed if login page URL is set

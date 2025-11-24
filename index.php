@@ -3,7 +3,7 @@
  * Plugin Name: Lockdown Toolkit by VegasGeek
  * Plugin URI: https://vegasgeek.com
  * Description: A suite of tools to harden and protect your WordPress site
- * Version: 1.0.1
+ * Version: 1.0.2
  * Author: VegasGeek
  * Author URI: https://vegasgeek.com
  * License: GPL v2 or later
@@ -44,7 +44,7 @@ add_action( 'plugins_loaded', 'lockdown_toolkit_init' );
  * On plugin activation, hide sensitive endpoints
  */
 function lockdown_toolkit_on_activation() {
-	// Hide sensitive endpoints
+	// Hide sensitive endpoints.
 	$hidden_endpoints = array(
 		'/wp/v2/users' => true,
 		'/wp/v2/media' => true,
